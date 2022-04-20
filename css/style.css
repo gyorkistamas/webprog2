@@ -1,0 +1,62 @@
+body {
+    background-image: url("../src/other/bgpicture.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    background-color: rgba(0, 0, 0, 0.73);
+    padding: 20px;
+    text-align: center;
+    border-radius: 15px;
+    width: fit-content;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+}
+
+a:visited, a:active, a {
+    color: white;
+}
+
+#profilpic {
+    max-height: 30px;
+    transform: translateY(25%);
+}
+
+#navbar {
+    background-color: rgba(0, 0, 0, 0.73);
+    height: 50px;
+    padding: 10px;
+    font-size: larger;
+    border-radius: 10px;
+    position: relative;
+}
+
+#navbar a {
+    text-decoration: none;
+}
+
+ul li{
+    list-style: none;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+#navbar ul {
+    position: absolute;
+    margin-top: 0px;
+}
+
+.miniature {
+    max-height: 60px;
+}
+
+#softwarepic {
+    max-height: 180px;
+}
+
