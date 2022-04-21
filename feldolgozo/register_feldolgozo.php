@@ -9,6 +9,7 @@
     <link rel="stylesheet" type="text/css" href="../css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" href="../src/other/icon.png" />
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <title>Regisztráció</title>
 </head>
@@ -41,6 +42,11 @@
             break;
 
         case 5:
+            echo "<h1>Sikertelen captcha validáció</h1>";
+            echo "<a href='../register.php'>Vissza a regisztrációhoz</a>";
+            break;
+
+        case 6:
             echo "<h1>Sikeres regisztráció</h1>";
             echo"<a href='../login.php'>Tovább a bejelentkezéshez</a>";
     }
@@ -90,6 +96,36 @@ function register()
         return 4;
     }
 
+
+
+    if(!isset($_POST['g-recaptcha-response']))
+    {
+        return 5;
+    }
+
+    $key = "6LfOTY4fAAAAAHE8j_zA3kH_VJDc1EmxItkMtt6q";
+    $response = $_POST['g-recaptcha-response'];
+
+    $data = array('secret' => $key, 'response' => $response);
+
+    $url = "https://www.google.com/recaptcha/api/siteverify";
+
+    $options = array(
+        'http' => array(
+            'header'  => "Content-type: application/x-www-form-urlencoded\r\n",
+            'method'  => 'POST',
+            'content' => http_build_query($data)
+        )
+    );
+    $context  = stream_context_create($options);
+    $result = json_decode(file_get_contents($url, false, $context));
+
+    if (!($result -> success))
+    {
+        return 5;
+    }
+
+
     $nev = $_POST['nev'];
     $jelszo = md5($_POST['jelszo']);
 
@@ -105,7 +141,7 @@ function register()
 
     mysqli_close($con);
 
-    return 5;
+    return 6;
 
 }
 

@@ -11,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="icon" href="src/other/icon.png" />
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <title>Regisztráció</title>
 </head>
 
@@ -44,10 +45,11 @@
 
             <tr>
                 <td><label for="jelszo">Jelszó:</label></td>
-                <td><input type="password" name="jelszo" required></td>
+                <td><input type="password" name="jelszo" required pattern=".{7,}" placeholder="Legalább 7 karakter"></td>
             </tr>
         </table>
 
+        <div class="g-recaptcha" data-sitekey="6LfOTY4fAAAAAFIihuhi5zsYvPWYoNgPeluxhkJ8"></div>
         <button type="submit">Regisztráció</button>
     </form>
 

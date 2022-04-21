@@ -48,7 +48,7 @@ else
 
                 <tr>
                     <td><label for="leiras">Leírás:</label></td>
-                    <td><input type="text" name="leiras" required></td>
+                    <td><textarea rows="5" cols="40" name="leiras" required></textarea></td>
                 </tr>
 
                 <tr>

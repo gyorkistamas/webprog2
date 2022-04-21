@@ -7,7 +7,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" type="text/css" href="css/index.css">
     <link rel="icon" href="src/other/icon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -71,7 +70,7 @@ else
 
             <tr>
                 <td><label for="leiras">Leírás:</label></td>
-                <td><input type="text" name="leiras" value="<?= $result[3] ?>"></td>
+                <td><textarea rows="5" cols="40" name="leiras"><?= $result[3] ?></textarea></td>
             </tr>
         </table>
 
