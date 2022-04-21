@@ -62,10 +62,10 @@ else
 <?php
     for ($i = $page * 6; $i < $max; $i++)
     {?>
-        <td>
+        <td <?php if ($i != ($max - 1)) echo " class='rightborder'";?>>
             <table>
                 <tr>
-                    <td><img src="src/softwares/<?=$result[$i][6]?>" class="miniature"></td>
+                    <td><img src="src/softwares/<?=$result[$i][6]?>" class="miniature" alt="kép"></td>
                 </tr>
                 <tr>
                     <td><p><?= $result[$i][1] ?></p></td>

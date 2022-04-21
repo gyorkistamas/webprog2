@@ -44,11 +44,11 @@ else
 <div class="container">
     <table>
         <tr>
-            <td><h3>Profilkép</h3></td>
-            <td><h3>Felhasználónév</h3></td>
-            <td><h3>Név</h3></td>
-            <td><h3>E-mail cím</h3></td>
-            <td><h3>Jogosultság</h3></td>
+            <td class="leftborder rightborder topandbottomborder"><h3>Profilkép</h3></td>
+            <td class="rightborder topandbottomborder"><h3>Felhasználónév</h3></td>
+            <td class="rightborder topandbottomborder"><h3>Név</h3></td>
+            <td class="rightborder topandbottomborder"><h3>E-mail cím</h3></td>
+            <td class="rightborder topandbottomborder"><h3>Jogosultság</h3></td>
         </tr>
 
 <?php
@@ -56,13 +56,13 @@ else
     {?>
 
         <tr>
-            <td><img src="src/users/<?=$user[5]?>" class="miniature"> </td>
-            <td><h3><?= $user[0] ?></h3></td>
-            <td><h3><?= $user[1] ?></h3></td>
-            <td><h3><?= $user[2] ?></h3></td>
-            <td><h3><?= $user[4] ?></h3></td>
-            <td><a href="profil.php?felhasznalonev=<?=$user[0]?>"><button>Szerkesztés</button></a></td>
-            <td><a href="feldolgozo/profil_torles.php?felhasznalo=<?= $user[0] ?>"><button>Törlés</button></a></td>
+            <td class="leftborder rightborder topandbottomborder"><img src="src/users/<?=$user[5]?>" class="miniature" alt="kép"> </td>
+            <td class="rightborder topandbottomborder"><h3><?= $user[0] ?></h3></td>
+            <td class="rightborder topandbottomborder"><h3><?= $user[1] ?></h3></td>
+            <td class="rightborder topandbottomborder"><h3><?= $user[2] ?></h3></td>
+            <td class="rightborder topandbottomborder"><h3><?= $user[4] ?></h3></td>
+            <td class="topandbottomborder"><a href="profil.php?felhasznalonev=<?=$user[0]?>"><button>Szerkesztés</button></a></td>
+            <td class="topandbottomborder rightborder"><a href="feldolgozo/profil_torles.php?felhasznalo=<?= $user[0] ?>"><button>Törlés</button></a></td>
         </tr>
 
 
