@@ -14,12 +14,12 @@
 
         if ($_SESSION['jogosultsag'] == "admin")
         {
-            echo "<li><a>Felhasználó hozzáadása | </a></li>";
-            echo "<li><a>Felhasználók szerkesztése | </a></li>";
+            echo "<li><a href='felhasznalo_szerkeszt.php'>Felhasználók szerkesztése | </a></li>";
         }
 
         ?>
 
+        <li><a href="feldolgozo/letoltes.php">Adatbázis letöltése | </a></li>
         <li id="logout">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="src/users/<?=$_SESSION['kep']?>" id="profilpic"> <?= $_SESSION['nev']?><a href="feldolgozo/logout.php"> | Kijelentkezés</a></li>
 
 

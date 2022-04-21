@@ -13,7 +13,7 @@ $con = connect();
 
 $query = "SELECT * FROM software";
 
-
+$name = "";
 if(isset($_GET['szoveg']))
 {
     $name = $_GET['szoveg'];
@@ -92,7 +92,7 @@ else
        <?php
         for ($j = 1; $j <= $oldalszam; $j++)
         {?>
-            <a href="index.php?page=<?= $j ?>"><button><?= $j ?></button></a>
+            <a href="index.php?page=<?= $j ?>&szoveg=<?=$name?>"><button><?= $j ?></button></a>
 
             <?php
         }?>
