@@ -32,8 +32,9 @@
             break;
 
         case 3:
-            echo "<h1>Ez már megtaláélható az adatbázisban!</h1>";
+            echo "<h1>Ez már megtalálható az adatbázisban!</h1>";
             echo"<a href='../hozzaadas.php'>Vissza</a>";
+            break;
 
         case 4:
             echo "<h1>Sikeres hozzáadás!</h1>";

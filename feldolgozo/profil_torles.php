@@ -44,6 +44,13 @@ else
     require "connect.php";
 
     $con = connect();
+
+    if (!$con)
+    {
+        include "adatbazis_hiba.php";
+    }
+    else
+    {
     $felhasznalonev = $_GET['felhasznalo'];
 
     $kep = mysqli_fetch_row(mysqli_query($con, "SELECT kep FROM user WHERE felhasznalonev = '$felhasznalonev'"))[0];
@@ -51,6 +58,8 @@ else
     unlink("../src/users/$kep");
 
     mysqli_query($con, "DELETE FROM user WHERE felhasznalonev = '$felhasznalonev'");
+
+    mysqli_close($con);
     ?>
 
     <div class="container">
@@ -60,6 +69,7 @@ else
 
 
 <?php
+}
 }
 ?>
 </body>

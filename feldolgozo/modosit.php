@@ -38,6 +38,13 @@ else
 
     $con = connect();
 
+    if (!$con)
+    {
+        include "adatbazis_hiba.php";
+    }
+    else
+    {
+
     $id = $_GET['id'];
 
 
@@ -75,7 +82,7 @@ else
 
 <?php
 }
-
+}
 ?>
 </body>
 

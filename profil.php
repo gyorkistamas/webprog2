@@ -21,7 +21,7 @@ session_start();
 
 if (!isset($_SESSION['felhasznalo']))
 {
-    include "need_to_login.php";
+    include "nincs_bejelentkezve.php";
     session_destroy();
 }
 else if($_GET['felhasznalonev'] != $_SESSION['felhasznalo'] && $_SESSION['jogosultsag'] != 'admin')
@@ -34,6 +34,13 @@ else
 
     include "menu.php";
     $con = connect();
+
+    if (!$con)
+    {
+        include "adatbazis_hiba.php";
+    }
+    else
+    {
 
     $felhasznalonev = $_GET['felhasznalonev'];
     $query = "SELECT * FROM user WHERE felhasznalonev= '$felhasznalonev'";
@@ -70,6 +77,8 @@ else
     </div>
 
     <?php
+        mysqli_close($con);
+}
 }
 
 ?>

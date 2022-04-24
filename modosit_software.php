@@ -21,7 +21,7 @@ session_start();
 
 if (!isset($_SESSION['felhasznalo']))
 {
-    include "need_to_login.php";
+    include "nincs_bejelentkezve.php";
     session_destroy();
 }
 else if($_SESSION['jogosultsag'] != "admin" && $_SESSION['jogosultsag'] != "moderator")
@@ -38,6 +38,13 @@ else
 
     include "menu.php";
     $con = connect();
+
+    if (!$con)
+    {
+        include "adatbazis_hiba.php";
+    }
+    else
+    {
 
     $id = $_GET['id'];
     $query = "SELECT * FROM software WHERE id= '$id'";
@@ -79,6 +86,8 @@ else
     </div>
 
 <?php
+        mysqli_close($con);
+}
 }
 
 ?>

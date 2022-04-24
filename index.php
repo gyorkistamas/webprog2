@@ -21,14 +21,14 @@
 
     if (!isset($_SESSION['felhasznalo']))
     {
-        include "need_to_login.php";
+        include "nincs_bejelentkezve.php";
         session_destroy();
     }
     else
     {
         include "menu.php";
 
-        include "showsoftware.php";
+        include "softwaremegjelenit.php";
     }
 
 ?>

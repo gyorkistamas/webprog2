@@ -37,7 +37,7 @@
     </form>
 
     <br>
-    <a href="register.php">A regisztráláshoz kattintson ide</a>
+    <a href="regisztracio.php">A regisztráláshoz kattintson ide</a>
 </div>
 
 </body>

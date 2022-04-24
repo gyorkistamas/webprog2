@@ -28,22 +28,22 @@
 
         case 2:
             echo "<h1>Adjon meg minden adatot a regisztrációhoz!</h1>";
-            echo "<a href='../register.php'>Vissza a regisztrációhoz!</a>";
+            echo "<a href='../regisztracio.php'>Vissza a regisztrációhoz!</a>";
             break;
 
         case 3:
             echo "<h1>Már létezik ilyen felhasználónév!</h1>";
-            echo "<a href='../register.php'>Vissza a regisztrációhoz</a>";
+            echo "<a href='../regisztracio.php'>Vissza a regisztrációhoz</a>";
             break;
 
         case 4:
             echo "<h1>Ezzel az e-mail címmel már regisztráltak!</h1>";
-            echo "<a href='../register.php'>Vissza a regisztrációhoz</a>";
+            echo "<a href='../regisztracio.php'>Vissza a regisztrációhoz</a>";
             break;
 
         case 5:
             echo "<h1>Sikertelen captcha validáció</h1>";
-            echo "<a href='../register.php'>Vissza a regisztrációhoz</a>";
+            echo "<a href='../regisztracio.php'>Vissza a regisztrációhoz</a>";
             break;
 
         case 6:

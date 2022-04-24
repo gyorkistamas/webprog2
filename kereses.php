@@ -21,7 +21,7 @@ session_start();
 
 if (!isset($_SESSION['felhasznalo']))
 {
-    include "need_to_login.php";
+    include "nincs_bejelentkezve.php";
     session_destroy();
 }
 else
@@ -30,7 +30,7 @@ else
 
     if(isset($_GET['szoveg']))
     {
-        include "showsoftware.php";
+        include "softwaremegjelenit.php";
     }
     else
     {?>

@@ -21,7 +21,7 @@ session_start();
 
 if (!isset($_SESSION['felhasznalo']))
 {
-    include "need_to_login.php";
+    include "nincs_bejelentkezve.php";
     session_destroy();
 }
 else if($_SESSION['jogosultsag'] != 'admin' && $_SESSION['jogosultsag'] != 'moderator')

@@ -21,7 +21,7 @@ session_start();
 
 if (!isset($_SESSION['felhasznalo']))
 {
-    include "need_to_login.php";
+    include "nincs_bejelentkezve.php";
     session_destroy();
 }
 else if($_SESSION['jogosultsag'] != 'admin')
@@ -35,6 +35,13 @@ else
     require "feldolgozo/connect.php";
 
     $con = connect();
+
+    if(!$con)
+    {
+        include "adatbazis_hiba.php";
+    }
+    else
+    {
 
     $query = "SELECT * FROM user";
 
@@ -68,6 +75,7 @@ else
 
     <?php
     }
+    mysqli_close($con);
 ?>
 
     </table>
@@ -75,7 +83,7 @@ else
 
 <?php
 }
-
+}
 ?>
 </body>
 

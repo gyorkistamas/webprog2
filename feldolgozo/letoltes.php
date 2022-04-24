@@ -4,6 +4,11 @@ require "connect.php";
 
 $con = connect();
 
+if(!$con)
+{
+    die("Hiba az adatbázissal való kapcsolat létrehozása során!<br><a href='../index.php'>Vissza a kezdőlapra</a>");
+}
+
 $query = "SELECT * FROM software";
 
 $result = mysqli_fetch_all(mysqli_query($con, $query));
@@ -24,7 +29,7 @@ $file = "../src/temp.txt";
 
 header('Content-Description: File Transfer');
 header('Content-Type: application/octet-stream');
-header('Content-Disposition: attachment; filename="'.basename($file).'"');
+header('Content-Disposition: attachment; filename="adatbazis.txt"');
 header('Expires: 0');
 header('Cache-Control: must-revalidate');
 header('Pragma: public');

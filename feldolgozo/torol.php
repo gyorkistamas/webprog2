@@ -33,15 +33,23 @@ else
     require "connect.php";
     $con = connect();
 
+    if(!$con)
+    {
+        include "adatbazis_hiba.php";
+    }
+    else
+    {
+
     $id = $_GET['id'];
 
     $file = mysqli_fetch_row(mysqli_query($con, "SELECT kep FROM software where id = '$id'"))[0];
 
     unlink("../src/softwares/$file");
 
-
     $query = "DELETE FROM software WHERE id = '$id'";
     mysqli_query($con, $query);
+
+    mysqli_close($con);
     ?>
 
     <div class="container">
@@ -51,7 +59,7 @@ else
 
 <?php
 }
-
+}
 ?>
 
 </body>

@@ -3,13 +3,21 @@
 
 if (!isset($_SESSION['felhasznalo']))
 {
-    header("Location: need_to_login.php");
+    header("Location: nincs_bejelentkezve.php");
 }
 
 
 require "feldolgozo/connect.php";
 
 $con = connect();
+
+
+if (!$con)
+{
+    include "adatbazis_hiba.php";
+}
+else
+{
 
 $query = "SELECT * FROM software";
 
@@ -104,6 +112,7 @@ else
 
 
 <?php
+}
 }
 
 ?>

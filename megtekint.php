@@ -23,7 +23,7 @@ require "feldolgozo/connect.php";
 
 if(!isset($_SESSION['felhasznalo']))
 {
-    include "need_to_login.php";
+    include "nincs_bejelentkezve.php";
 }
 else if (!isset($_GET['id']))
 {
@@ -32,6 +32,13 @@ else if (!isset($_GET['id']))
 else
 {
     $con = connect();
+
+    if (!$con)
+    {
+        include "adatbazis_hiba.php";
+    }
+    else
+    {
     $id = $_GET['id'];
     $query = "SELECT * FROM software WHERE id = '$id'";
 
@@ -67,6 +74,8 @@ else
 
 
 <?php
+        mysqli_close($con);
+    }
 }
 ?>
 </body>

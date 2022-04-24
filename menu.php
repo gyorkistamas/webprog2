@@ -20,7 +20,7 @@
         ?>
 
         <li><a href="feldolgozo/letoltes.php">Adatbázis letöltése | </a></li>
-        <li id="logout">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="src/users/<?=$_SESSION['kep']?>" id="profilpic"> <?= $_SESSION['nev']?><a href="feldolgozo/logout.php"> | Kijelentkezés</a></li>
+        <li id="logout">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="src/users/<?=$_SESSION['kep']?>" id="profilpic" alt="profilkép"> <?= $_SESSION['nev']?><a href="feldolgozo/kijelentkezes.php"> | Kijelentkezés</a></li>
 
 
     </ul>

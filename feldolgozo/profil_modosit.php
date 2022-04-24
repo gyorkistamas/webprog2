@@ -34,6 +34,13 @@ else
 
     $con = connect();
 
+    if(!$con)
+    {
+        include "adatbazis_hiba.php";
+    }
+    else
+    {
+
     $felhasznalonev = $_GET['felhasznalonev'];
 
 
@@ -73,6 +80,7 @@ else
         session_destroy();
     }
 
+
     ?>
 
     <div class="container">
@@ -83,7 +91,7 @@ else
 
     <?php
 }
-
+}
 ?>
 </body>
 
