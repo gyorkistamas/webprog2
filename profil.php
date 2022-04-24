@@ -70,6 +70,25 @@ else
                     <td><label for="jelszo">Jelszó:</label></td>
                     <td><input type="password" name="jelszo"></td>
                 </tr>
+
+                <?php
+
+                if ($_GET['felhasznalonev'] != $_SESSION['felhasznalo'] && $_SESSION['jogosultsag'] == 'admin')
+                {?>
+
+                    <tr>
+                        <td><label for="jog">Jogosultság:</label></td>
+                        <td><select name="jog" id="cars">
+                                <option value="admin" <?php if($result[4] == "admin") echo "selected";?>>Admin</option>
+                                <option value="moderator" <?php if($result[4] == "moderator") echo "selected";?>>Moderátor</option>
+                                <option value="felhasznalo" <?php if($result[4] == "felhasznalo") echo "selected";?>>Felhasználó</option>
+                            </select></td>
+                    </tr>
+
+                    <?php
+                }
+
+                ?>
             </table>
 
             <button type="submit">Módosítás</button>

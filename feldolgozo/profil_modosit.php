@@ -64,6 +64,13 @@ else
     }
 
 
+    if (isset($_POST['jog']) && $_SESSION['jogosultsag'] == "admin")
+    {
+        $csoport = $_POST['jog'];
+        mysqli_query($con, "UPDATE user SET csoport = '$csoport' WHERE felhasznalonev = '$felhasznalonev'");
+    }
+
+
     if(isset($_POST['jelszo']) && $_POST['jelszo'] != "")
     {
         mysqli_query($con, "UPDATE user SET jelszo = '$jelszo' WHERE felhasznalonev = '$felhasznalonev'");
@@ -87,7 +94,6 @@ else
         <h1>Sikeres módosítás!</h1>
         <a href="../index.php"><button>Vissza</button></a>
     </div>
-
 
     <?php
 }

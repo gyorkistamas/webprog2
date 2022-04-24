@@ -93,16 +93,15 @@ button{
     box-sizing: border-box;
     text-decoration:none;
     font-weight:300;
-    color:#000000;
+    color:#FFFFFF;
     text-shadow: 0 0.04em 0.04em rgba(0,0,0,0.35);
-    background-color:#579783;
+    background-color: #3f6551;
     text-align:center;
     transition: all 0.15s;
 }
 
 button:hover{
     text-shadow: 0 0 2em rgba(255,255,255,1);
-    color:#FFFFFF;
     border-color:#FFFFFF;
 }
 
