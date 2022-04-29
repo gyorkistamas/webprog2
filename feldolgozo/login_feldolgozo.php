@@ -89,6 +89,9 @@ function login()
     $_SESSION['jogosultsag'] = $row[4];
     $_SESSION['kep'] = $row[5];
 
+    $datum = date("Y-m-d H:i:s", time());
+    mysqli_query($con, "INSERT INTO log(felhasznalo, tevekenyseg, datum) VALUES('$felhasznalonev', 'bejelentkezés', '$datum')");
+
     mysqli_close($con);
     return 4;
 }

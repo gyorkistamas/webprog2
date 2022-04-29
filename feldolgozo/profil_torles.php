@@ -59,12 +59,13 @@ else
 
     mysqli_query($con, "DELETE FROM user WHERE felhasznalonev = '$felhasznalonev'");
 
+
     mysqli_close($con);
     ?>
 
     <div class="container">
         <h1>Sikeres törlés!</h1>
-        <a href="../index.php">Vissza a kezdőlapra</a>
+        <meta http-equiv='refresh' content='1;url=../index.php'>
     </div>
 
 

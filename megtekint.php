@@ -43,6 +43,18 @@ else
     $query = "SELECT * FROM software WHERE id = '$id'";
 
     $software = mysqli_fetch_row(mysqli_query($con, $query));
+
+    if ($software == NULL)
+    {?>
+        <div class="container">
+            <h1>Ez az elem nem található!</h1>
+            <a href="index.php">Vissza a főoldalra</a>
+        </div>
+
+        <?php
+    }
+    else
+    {
     ?>
 
     <div class="container">
@@ -74,6 +86,7 @@ else
 
 
 <?php
+    }
         mysqli_close($con);
     }
 }

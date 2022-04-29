@@ -21,8 +21,8 @@
 
     if (!isset($_SESSION['felhasznalo']))
     {
-        include "nincs_bejelentkezve.php";
         session_destroy();
+        echo "<meta http-equiv='refresh' content='0;url=login.php'>";
     }
     else
     {

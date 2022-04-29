@@ -76,7 +76,7 @@ else
 
     <div class="container">
         <h1>Sikeres módosítás!</h1>
-        <a href="../index.php"><button>Vissza</button></a>
+        <meta http-equiv='refresh' content='2;url=../index.php'>
     </div>
 
 

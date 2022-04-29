@@ -38,7 +38,7 @@
 
         case 4:
             echo "<h1>Sikeres hozzáadás!</h1>";
-            echo "<a href='../index.php'>Vissza a főoldalra</a>";
+            echo "<meta http-equiv='refresh' content='2;url=../index.php'>";
     }
 
     ?>

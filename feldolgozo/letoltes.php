@@ -13,7 +13,7 @@ $query = "SELECT * FROM software";
 
 $result = mysqli_fetch_all(mysqli_query($con, $query));
 
-$file = fopen("../src/temp.txt", "w");
+$file = fopen("../src/temp.csv", "w");
 
 fwrite($file, 'id;nev;fejleszto;leiras;ar;hozzaadta;kep');
 
@@ -25,11 +25,11 @@ foreach ($result as $software)
 fclose($file);
 mysqli_close($con);
 
-$file = "../src/temp.txt";
+$file = "../src/temp.csv";
 
 header('Content-Description: File Transfer');
 header('Content-Type: application/octet-stream');
-header('Content-Disposition: attachment; filename="adatbazis.txt"');
+header('Content-Disposition: attachment; filename="adatbazis.csv"');
 header('Expires: 0');
 header('Cache-Control: must-revalidate');
 header('Pragma: public');
